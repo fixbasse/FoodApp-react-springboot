@@ -6,29 +6,37 @@ const HomePage = () => {
     return (
         <>
             {/* HEADER ======> */}
-            <div className='flex flex-col items-center justify-center h-screen banner'>
+            <div className='relative flex flex-col items-center justify-center h-screen banner'>
+
+                <div className="absolute w-full h-full dark:bg-black/30 z-0 inset-0">
+
+                </div>
                 {/* TITLE */}
-                <section className='flex flex-col items-center gap-2'>
-                    <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold'>
+                <section className='flex flex-col items-center gap-2 z-50'>
+                    <h1 className='text-5xl md:text-6xl lg:text-7xl font-bold text-muted dark:text-primary'>
                         Home Food
                     </h1>
-                    <p className='md:text-xl lg:text-2xl'>
+                    <p className='md:text-xl lg:text-2xl text-center text-muted dark:text-primary'>
                         Taste the Convenience: Food, Fast and Delivered.
                     </p>
-
-                    <ThemeToggle />
                 </section>
             </div>
             {/* <========= HEADER */}
 
             {/* CAROUSEL */}
-            <section className="w-full flex justify-center p-8">
-                <FoodCarousel />
+            <section className="w-full flex flex-col p-8">
+                <h2 className="text-center md:text-left text-xl md:text-2xl font-semibold pb-8">
+                    Top Meal
+                </h2>
+
+                <div className="flex justify-center">
+                    <FoodCarousel />
+                </div>
             </section>
 
             {/* CARDS */}
             <section className="p-8 flex flex-col">
-                <h2 className="text-xl md:text-2xl font-semibold text-center pb-16">
+                <h2 className="text-center md:text-left text-xl md:text-2xl font-semibold pb-8">
                     Order From Our Handpicked Favourite
                 </h2>
 

@@ -32,18 +32,6 @@ export const foodData = [
         label: 'Sea Food',
         img: 'https://images.pexels.com/photos/2871757/pexels-photo-2871757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     },
-    {
-        label: 'Burger',
-        img: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
-    {
-        label: 'Burger',
-        img: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
-    {
-        label: 'Burger',
-        img: 'https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-    },
 ]
 
 export function FoodCarousel() {
@@ -58,19 +46,20 @@ export function FoodCarousel() {
                 {foodData.map((item, index) => (
                     <CarouselItem
                         key={index}
-                        className="md:basis-1/3 lg:basis-1/6 flex flex-col items-center">
-                        <div>
-                            <Card className="rounded-full">
-                                <CardContent className="flex aspect-square items-center justify-center p-0">
-                                    <img
-                                        src={item.img}
-                                        alt=""
-                                        className="w-full h-full rounded-full"
-                                    />
-                                </CardContent>
-                            </Card>
-                        </div>
-                        <span className="">
+                        className="md:basis-1/3 lg:basis-1/6 flex flex-col items-center"
+                    >
+
+                        <Card className="rounded-full cursor-pointer hover:scale-90 duration-100">
+                            <CardContent className="flex aspect-square items-center justify-center p-0">
+                                <img
+                                    src={item.img}
+                                    className="w-full h-full rounded-full"
+                                    alt="/"
+                                />
+                            </CardContent>
+                        </Card>
+
+                        <span className="font-medium text-muted-foreground">
                             {item.label}
                         </span>
                     </CarouselItem>
