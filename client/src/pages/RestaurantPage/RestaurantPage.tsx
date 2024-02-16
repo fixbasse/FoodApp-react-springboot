@@ -1,12 +1,13 @@
 import Filter from "./Filter"
 import Header from "./Header"
 
+//* PAGE 
 const RestaurantPage = () => {
     return (
-        <div>
+        <>
             <Header />
             <Filter />
-        </div>
+        </>
     )
 }
 

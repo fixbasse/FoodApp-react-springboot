@@ -1,7 +1,5 @@
 import { foodData } from '@/components/carousels/HomeCarousel'
-import { Button } from '@/components/ui/button'
-import { Minus, MinusCircle, Plus, PlusCircle } from 'lucide-react'
-import React from 'react'
+import { MinusCircle, PlusCircle } from 'lucide-react'
 
 const PaymentCart = () => {
     return (
@@ -13,7 +11,6 @@ const PaymentCart = () => {
                         className='flex gap-4 justify-between items-center'
                     >
                         <div className='flex gap-4'>
-
                             <img
                                 src={item.img}
                                 alt="/"

@@ -32,7 +32,7 @@ export const foodData = [
         label: 'Sea Food',
         img: 'https://images.pexels.com/photos/2871757/pexels-photo-2871757.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
     },
-]
+];
 
 export function FoodCarousel() {
     return (
