@@ -21,7 +21,7 @@ export function FoodCard() {
     const [isLoading, setIsLoading] = useState(false);
 
     return (
-        <Card className="w-full rounded-md cursor-pointer hover:scale-90 duration-300">
+        <Card className="w-full bg-primary-foreground border-0 rounded-xl cursor-pointer hover:scale-90 duration-300">
             <Link
                 to='/restaurant/1'
             >

@@ -6,27 +6,8 @@ const Header = () => {
     const [isLoading, setIsLoading] = useState(false);
 
     return (
-        <div>
-            {isLoading &&
-                <>
-                    <Skeleton
-                        className="h-[52dvh] w-full object-cover"
-                    />
-
-                    <section className="py-4 md:px-20 flex flex-col gap-4">
-                        <Skeleton className="text-3xl md:text-4xl font-semibold h-[40px]">
-                            
-                        </Skeleton>
-                        <Skeleton className="text-muted-foreground mb-2 h-[50px]">
-
-                        </Skeleton>
-                        <Skeleton className="h-[25px]">
-                            
-                        </Skeleton>
-                    </section>
-                </>
-            }
-
+        <>
+            {/* CONTENT */}
             {!isLoading &&
                 <>
                     <img
@@ -35,20 +16,34 @@ const Header = () => {
                         className="h-[52dvh] w-full object-cover"
                     />
 
-                    <section className="py-4 md:px-20">
+                    <section className="p-4 md:px-20">
                         <h1 className="text-3xl md:text-4xl font-semibold">
                             India Fast Food
                         </h1>
                         <p className="text-muted-foreground mb-2">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio architecto voluptas animi neque. Aspernatur nisi, nesciunt at expedita atque numquam quod magnam dolorem facere tenetur, facilis autem quos cum possimus.
                         </p>
-                        <span>
+                        <span className="text-pink-500 uppercase">
                             Open now 10.30am - 12.00pm
                         </span>
                     </section>
                 </>
             }
-        </div>
+
+            {isLoading &&
+                <>
+                    <Skeleton
+                        className="h-[52dvh] w-full object-cover"
+                    />
+
+                    <section className="py-4 md:px-20 flex flex-col gap-4">
+                        <Skeleton className="text-3xl md:text-4xl font-semibold h-[40px]" />
+                        <Skeleton className="text-muted-foreground mb-2 h-[50px]" />
+                        <Skeleton className="h-[25px]" />
+                    </section>
+                </>
+            }
+        </>
     )
 }
 

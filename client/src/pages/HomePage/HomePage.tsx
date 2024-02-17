@@ -29,7 +29,7 @@ const HomePage = () => {
             </header>
 
             {/* CAROUSEL */}
-            <section className="w-full flex flex-col p-8">
+            <section className="w-full flex flex-col p-4 md:p-8">
                 <h2 className="text-center md:text-left text-xl md:text-2xl font-semibold pb-8">
                     Top Meal
                 </h2>
@@ -41,12 +41,12 @@ const HomePage = () => {
 
             {/* CARDS SECTION */}
             {/* .map() */}
-            <section className="p-8 flex flex-col">
+            <section className="p-4 md:p-8 flex flex-col">
                 <h2 className="text-center md:text-left text-xl md:text-2xl font-semibold pb-8">
                     Order From Our Handpicked Favourite
                 </h2>
 
-                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-8">
                     <FoodCard />
                     <FoodCard />
                     <FoodCard />

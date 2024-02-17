@@ -55,9 +55,10 @@ const Filter = () => {
     };
 
     return (
-        <div className='py-4 md:px-20 grid grid-cols-10 gap-8'>
+        <div className='md:px-20 grid md:grid-cols-10 gap-8'>
+
             {/* LEFT */}
-            <div className='col-span-2'>
+            <div className='md:col-span-2 hidden md:block'>
                 <Form {...form}>
                     <form onSubmit={form.handleSubmit(onSubmit)} className="w-2/3 space-y-6">
                         <FormField
@@ -97,13 +98,16 @@ const Filter = () => {
                                 </FormItem>
                             )}
                         />
-                        <Button type="submit">Submit</Button>
+
+                        <Button type="submit">
+                            Submit
+                        </Button>
                     </form>
                 </Form>
             </div>
 
             {/* RIGHT */}
-            <div className='col-span-8 grid gap-8'>
+            <div className='md:col-span-8 grid gap-4 md:gap-8 px-4 pb-4 md:p-0'>
                 {/* IF NO CATEGORY IS SELECT && SHOW EVERY FOOD */}
                 {showFilter.length === 0 && dataFromDb.map((item) => (
                     <div
@@ -118,10 +122,10 @@ const Filter = () => {
                             />
                             {/* TEXT */}
                             <div className='flex flex-col justify-between'>
-                                <h2 className='text-2xl'>
+                                <h2 className='text-xl md:text-2xl'>
                                     {item.label}
                                 </h2>
-                                <span className='text-4xl md:text-5xl'>
+                                <span className='text-3xl sm:text-4xl md:text-5xl'>
                                     $30
                                 </span>
                                 <p className='text-muted-foreground'>
@@ -151,10 +155,10 @@ const Filter = () => {
                             />
                             {/* TEXT */}
                             <div className='flex flex-col justify-between'>
-                                <h2 className='text-2xl'>
+                                <h2 className='text-xl md:text-2xl'>
                                     {item.label}
                                 </h2>
-                                <span className='text-4xl md:text-5xl'>
+                                <span className='text-3xl sm:text-4xl md:text-5xl'>
                                     $30
                                 </span>
                                 <p className='text-muted-foreground'>

@@ -1,17 +1,17 @@
+import Address from "./Address"
 import PaymentCart from "./PaymentCart"
-
 
 const PaymentPage = () => {
     return (
-        <div className='p-4 pt-20 md:px-20 grid grid-cols-10 gap-8'>
+        <div className='p-4 pt-[5.5rem] md:pt-[6.5rem] lg:px-20 grid md:grid-cols-10 gap-8 md:gap-20'>
             {/* LEFT */}
-            <div className="col-span-4">
+            <div className="md:col-span-3">
                 <PaymentCart />
             </div>
 
             {/* RIGHT */}
-            <div className=" col-span-6">
-                Fix
+            <div className="md:col-span-7">
+                <Address />
             </div>
         </div>
     )
